@@ -13,6 +13,9 @@
     "url": "https://github.com/KingArthurZ3/clubhub/issues"
   },
   "homepage": "https://github.com/KingArthurZ3/clubhub#readme",
+  "engines": {
+    "node": "4.2.1"
+  },
   "scripts": {
     "build:app": "BABEL_ENV=babel6 ./node_modules/.bin/browserify bundles/app.jsx -p [ minifyify --no-map --uglify [ --compress [ --dead_code --comparisons 0 ] ] ] -o static/js/app.js --extension=.jsx",
     "watch:app": "BABEL_ENV=babel6 ./node_modules/.bin/watchify bundles/app.jsx --debug --verbose -o static/js/app.js --extension=.jsx",
