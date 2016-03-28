@@ -1,0 +1,59 @@
+.clubs .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 600px;
+
+}
+
+.clubs input[type=text] {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    background: #FFFFFF;
+    border: 1px solid #BDC3C7;
+    color: #34495E;
+    font-weight: 600;
+    margin: 10px auto 50px;
+    display: block;
+}
+
+.club:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #BDC3C7;
+}
+
+.club .title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #8E44AD;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.club .field-label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    color: #34495E;
+    min-width: 100px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.club .field {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #34495E;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.club .group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+}
