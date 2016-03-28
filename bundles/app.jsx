@@ -51,7 +51,7 @@ new Router();
 Backbone.history.start({ pushState: true });
 
 jQuery(document).on("click", "a[href]:not([data-bypass])", function(evt) {
-    var href = { prop: $(this).prop("href"), attr: $(this).attr("href") };
+    var href = { prop: jQuery(this).prop("href"), attr: jQuery(this).attr("href") };
     var root = location.protocol + "//" + location.host + "/";
     if (href.prop.slice(0, root.length) === root) {
         evt.preventDefault();
