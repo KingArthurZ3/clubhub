@@ -6,7 +6,7 @@ import Clubs            from '../components/clubs';
 import NavigationBar    from '../components/navigationBar';
 import Welcome          from '../components/welcome';
 
-window.jQuery = require('jQuery');
+window.jQuery = require('jquery');
 require('bootstrap');
 
 var Router = Backbone.Router.extend({

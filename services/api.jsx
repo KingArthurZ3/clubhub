@@ -1,5 +1,5 @@
 import Blockspring from './blockspring';
-import jQuery      from 'jQuery';
+import jQuery      from 'jquery';
 
 export default {
     getClubs: (callback) => {
