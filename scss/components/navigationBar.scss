@@ -16,6 +16,14 @@ nav > li > a {
     border-bottom: 1px solid #BDC3C7;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #BDC3C7;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #34495E;
 }
@@ -28,8 +36,10 @@ nav > li > a {
     background-color: #FFFFFF;
 }
 
-.navbar-inverse .navbar-nav > li > a.active {
-    border-bottom: 3px solid #34495E;
+@media (min-width: 768px) {
+    .navbar-inverse .navbar-nav > li > a.active {
+        border-bottom: 3px solid #34495E;
+    }
 }
 
 .navbar-inverse .navbar-nav > li > a {

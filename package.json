@@ -46,6 +46,7 @@
     "express": "^4.13.4",
     "node-sass": "^3.4.2",
     "nodemon": "^1.9.1",
+    "react-spinner": "^0.2.3",
     "watch": "0.16.0",
     "watchify": "3.7.0"
   },

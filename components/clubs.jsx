@@ -1,6 +1,7 @@
-import React      from 'react';
-import API        from '../services/api';
-import Club       from './club';
+import React        from 'react';
+import Spinner      from 'react-spinner';
+import API          from '../services/api';
+import ClubItem     from './clubItem';
 
 class Clubs extends React.Component {
     constructor(props) {
@@ -8,25 +9,39 @@ class Clubs extends React.Component {
         API.getClubs((clubs) => {
             this.setState({
                 clubs: clubs,
-                filteredClubs: clubs
+                filteredClubs: clubs,
+                loading: false
             });
         });
         this.state = {
             clubs: [],
-            filteredClubs: []
+            filteredClubs: [],
+            loading: true
         };
     }
 
     render() {
-        return(
+        return (
             <main className="clubs">
                 <div className="container">
                     <input placeholder="Filter by club name" type="text" onChange={this.filterHandler()} />
-                    {this.state.filteredClubs.map(function(club, index) {
-                        return <Club key={index} club={club} />;
-                    })}
+                    {this.state.loading ? this.renderLoading() : this.renderClubs()}
                 </div>
             </main>
+        );
+    }
+
+    renderClubs() {
+        return this.state.filteredClubs.map(function(club, index) {
+            return <ClubItem key={index} club={club} />;
+        });
+    }
+
+    renderLoading() {
+        return (
+            <div className="loading">
+                <Spinner />
+            </div>
         );
     }
 
@@ -34,7 +49,7 @@ class Clubs extends React.Component {
         return (event) => {
             let text =  event.target.value;
             let newFilteredClubs = text == "" || text == null ? this.state.clubs : this.state.clubs.filter(function(club) {
-                if (club.name.toLowerCase().includes(text)) {
+                if (club.name.toLowerCase().includes(text.toLowerCase())) {
                     return true;
                 }
                 return false;

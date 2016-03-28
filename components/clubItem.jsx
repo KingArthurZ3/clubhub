@@ -1,7 +1,7 @@
 import React      from 'react';
 import API        from '../services/api';
 
-class Club extends React.Component {
+class ClubItem extends React.Component {
     render() {
         return(
             <div className="club">
@@ -51,4 +51,4 @@ class Club extends React.Component {
     }
 }
 
-export default Club;
+export default ClubItem;
