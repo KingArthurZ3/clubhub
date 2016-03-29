@@ -7,17 +7,27 @@ class Clubs extends React.Component {
     constructor(props) {
         super(props);
         API.getClubs((clubs) => {
-            this.setState({
-                clubs: clubs,
-                filteredClubs: clubs,
-                loading: false
-            });
+            if (!this.isUnmounted) {
+                this.setState({
+                    clubs: clubs,
+                    filteredClubs: clubs,
+                    loading: false
+                });
+            }
         });
         this.state = {
             clubs: [],
             filteredClubs: [],
             loading: true
         };
+    }
+
+    componentWillMount() {
+        this.isUnmounted = false;
+    }
+
+    componentWillUnmount() {
+        this.isUnmounted = true;
     }
 
     render() {

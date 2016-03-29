@@ -38,7 +38,7 @@ nav > li > a {
 
 @media (min-width: 768px) {
     .navbar-inverse .navbar-nav > li > a.active {
-        border-bottom: 3px solid #34495E;
+        border-bottom: 4px solid #34495E;
     }
 }
 
@@ -47,8 +47,10 @@ nav > li > a {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .navbar-inverse .navbar-nav > li > a:active,
