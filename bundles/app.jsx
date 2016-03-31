@@ -13,9 +13,9 @@ var Router = Backbone.Router.extend({
   routes : {
     "": "index",
     "about": "about",
-    "clubs": "clubs",
+    "clubs": "clubs"
   },
-  index : function() {
+  index: function() {
       ReactDOM.render(
           <NavigationBar active=""/>,
           document.getElementById('navigation')
@@ -25,7 +25,7 @@ var Router = Backbone.Router.extend({
           document.getElementById('view')
       );
   },
-  about : function() {
+  about: function() {
       ReactDOM.render(
           <NavigationBar active="about"/>,
           document.getElementById('navigation')
@@ -35,7 +35,7 @@ var Router = Backbone.Router.extend({
           document.getElementById('view')
       );
   },
-  clubs : function() {
+  clubs: function() {
       ReactDOM.render(
           <NavigationBar active="clubs"/>,
           document.getElementById('navigation')
