@@ -5,9 +5,9 @@ export default {
     getClubs: (callback) => {
         Blockspring.runParsed("query-public-google-spreadsheet", {
                 "query": "SELECT *",
-                "url": "https://docs.google.com/spreadsheets/d/1LdoK6CKz2OHWyBB5JUlYxxeYy4BSKpW7-w4crSODpx4/edit#gid=786410895"
+                "url": "https://docs.google.com/spreadsheets/d/12lZPb-BKuDsEVWirwm8puMrvmACoaNYJyS5A_vjnVak/edit?usp=sharing"
             }, {
-                "api_key": "br_28029_d069ee1984a468c879dc72cf038c089798b5ba4d"
+                "api_key": "AIzaSyDkut1nm95ecS9ObPlWDX-eKdzQX229YQI"
             }, function (res) {
                 var array = jQuery.map(res.params, function (value) {
                     return [value];
